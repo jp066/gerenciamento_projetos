@@ -1,0 +1,40 @@
+<!-- projeto_detail.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes das Tarefas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3>Detalhes da Tarefa - {{ tarefa.nome }}</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Descrição</h5>
+                <p class="card-text">{{ tarefa.descricao }}</p>
+
+                <h5 class="card-title">Informações</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Data de Início:</strong> {{ tarefa.data_inicio }}</li>
+                    <li class="list-group-item"><strong>Data de Término:</strong> {{ tarefa.data_termino }}</li>
+                    <li class="list-group-item"><strong>Status:</strong> {{ tarefa.get_status_display }}</li>
+                    <li class="list-group-item"><strong>Projeto:</strong>
+                        {{tarefa.projeto.nome }}</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'home' %}" class="btn btn-secondary">Voltar para Home</a>
+                <a href="{% url 'tarefa_update' id=tarefa.id %}" class="btn btn-primary">Atualizar</a>
+                <a href="{% url 'tarefa_delete' id=tarefa.id %}" class="btn btn-danger">Exluir</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

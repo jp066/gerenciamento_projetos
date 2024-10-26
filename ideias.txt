@@ -1,0 +1,18 @@
+- Campos para Projetos
+ID do Projeto: Identificador único do projeto.
+Nome do Projeto: Nome do projeto.
+Descrição: Descrição detalhada do projeto.
+Data de Início: Data em que o projeto começa.
+Data de Término: Data prevista para a conclusão do projeto.
+Status: Status do projeto (e.g., em andamento, concluído, cancelado).
+Gerente Responsável: Nome do usuário que é o gerente do projeto.
+
+- Campos para Tarefas
+ID da Tarefa: Identificador único da tarefa.
+Nome da Tarefa: Nome da tarefa.
+Descrição: Descrição detalhada da tarefa.
+Data de Início: Data em que a tarefa deve ser iniciada.
+Data de Término: Data prevista para a conclusão da tarefa.
+Status: Status da tarefa (e.g., pendente, em andamento, concluída).
+ID do Projeto: Identificador do projeto ao qual a tarefa está associada.
+Responsável: ID do usuário que é responsável pela tarefa.
